@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0402CB7D-00EB-44D6-BA3E-B55F4E8F56C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestioneVideoteca</RootNamespace>
+    <AssemblyName>GestioneVideoteca</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classi\Prenotazione.cs" />
+    <Compile Include="Classi\Restituzione.cs" />
+    <Compile Include="Classi\Utenti.cs" />
+    <Compile Include="formDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDashboard.Designer.cs">
+      <DependentUpon>formDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formDashboardAmministratore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDashboardAmministratore.Designer.cs">
+      <DependentUpon>formDashboardAmministratore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formElencoFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formElencoFilm.Designer.cs">
+      <DependentUpon>formElencoFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formFilmConsigliati.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formFilmConsigliati.Designer.cs">
+      <DependentUpon>formFilmConsigliati.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGestioneFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGestioneFilm.Designer.cs">
+      <DependentUpon>formGestioneFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formGestioneGenere.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formGestioneGenere.Designer.cs">
+      <DependentUpon>formGestioneGenere.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formListaUtenti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formListaUtenti.Designer.cs">
+      <DependentUpon>formListaUtenti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formPrenotaFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formPrenotaFilm.Designer.cs">
+      <DependentUpon>formPrenotaFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRecuperaPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRecuperaPassword.Designer.cs">
+      <DependentUpon>formRecuperaPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRegistrazione.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRegistrazione.Designer.cs">
+      <DependentUpon>formRegistrazione.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formRestituisciFilm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRestituisciFilm.Designer.cs">
+      <DependentUpon>formRestituisciFilm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formVisualizzaPrenotazioniUtente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formVisualizzaPrenotazioniUtente.Designer.cs">
+      <DependentUpon>formVisualizzaPrenotazioniUtente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="formDashboard.resx">
+      <DependentUpon>formDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formDashboardAmministratore.resx">
+      <DependentUpon>formDashboardAmministratore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formElencoFilm.resx">
+      <DependentUpon>formElencoFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formFilmConsigliati.resx">
+      <DependentUpon>formFilmConsigliati.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGestioneFilm.resx">
+      <DependentUpon>formGestioneFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formGestioneGenere.resx">
+      <DependentUpon>formGestioneGenere.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formListaUtenti.resx">
+      <DependentUpon>formListaUtenti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formPrenotaFilm.resx">
+      <DependentUpon>formPrenotaFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRecuperaPassword.resx">
+      <DependentUpon>formRecuperaPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRegistrazione.resx">
+      <DependentUpon>formRegistrazione.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRestituisciFilm.resx">
+      <DependentUpon>formRestituisciFilm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formVisualizzaPrenotazioniUtente.resx">
+      <DependentUpon>formVisualizzaPrenotazioniUtente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

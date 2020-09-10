@@ -1,0 +1,61 @@
+CREARE UN'APPLICAZIONE WINDOWS FORM C# CHE PERMETTE LA GESTIONE DI UNA VIDEOTECA CON RELATIVO DATABASE
+
+SCHERMATE:
+
+1) LOGIN, REGISTRAZIONEE, RECUPERO PASSWORD
+
+2) SCELTA DEL FILM, CON ELENCO DEI FILM DISPONIBILI 
+
+3) PRENOTAZIONE DEL FILM CON CALCOLO DATA DI RESTITUZIONE 
+
+4) RESTITUZIONE FILM
+
+5) GESTIONE FILM RIMANENTI E RELATIVI PRESTITI ATTIVI (SOLO AMMINISTRATORE) 
+
+
+TABELLE DATABASE CON RELATIVE PRIMARY KEY E FORENCES KEY 
+
+
+Tabella Utenti(
+idUtente int not null primary key identity(1,1),
+cognome varchar(50) not null,
+nome varchar(50) not null,
+email varchar(50) not null,
+password varchar(50) not null,
+IdCitta int not null,
+IdGenere int not null,
+IsAdministrator bool not null default 0,
+FOREIGN KEY (IdCitta) REFERENCES Citta(IdCitta),
+FOREIGN KEY (IdGenere) REFERENCES Genere(IdGenere)
+)
+
+Tabella Genere(
+idGenere int not null primary key identity(1,1),
+nomeGenere varchar(255) not null
+)
+
+Tabella Film(
+idFilm int not null primary key identity(1,1),
+nomeFilm varchar(255) not null,
+idGenere int not null,
+dataUscita date not null,
+numeroCopie int not null default 100,
+disponibile bool not null default 1,
+FOREIGN KEY (IdGenere) REFERENCES Genere(IdGenere)
+)
+
+Tabella Prenotazioni(
+idPrenotazione int not null primary key identity(1,1),
+idUtente int not null,
+idFilm int not null,
+dataInzio date not null,
+dataFine date not null,
+GiorniRitardo int not null,
+FOREIGN KEY (IdUtente) REFERENCES Utenti(IdUtenti),
+FOREIGN KEY (IdFilm) REFERENCES Film(IdFilm)
+)
+
+Tabella Citta(
+IdCitta int not null primary key identity(1,1),
+NomeCitta varchar(255) not null
+)
